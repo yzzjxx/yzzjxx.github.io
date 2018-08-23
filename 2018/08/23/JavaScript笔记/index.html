@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>JavaScript笔记 | isMyBlog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Welcome to myBlod! This is my very first test post. Please give me some marks!  Thanks for you reading! Have a good time!">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript笔记">
+<meta property="og:url" content="http://yzzjxx.github.io/2018/08/23/JavaScript笔记/index.html">
+<meta property="og:site_name" content="isMyBlog">
+<meta property="og:description" content="Welcome to myBlod! This is my very first test post. Please give me some marks!  Thanks for you reading! Have a good time!">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yzzjxx.github.io/2018/08/public/css/images/shoes.jpg">
+<meta property="og:updated_time" content="2018-08-23T13:58:11.411Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript笔记">
+<meta name="twitter:description" content="Welcome to myBlod! This is my very first test post. Please give me some marks!  Thanks for you reading! Have a good time!">
+<meta name="twitter:image" content="http://yzzjxx.github.io/2018/08/public/css/images/shoes.jpg">
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fa-brands.min.css">
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fa-solid.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">isMyBlog</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/.">Home</a>
+                
+                    <a class="main-nav-link" href="/archives">Archives</a>
+                
+                    <a class="main-nav-link" href="/categories">Categories</a>
+                
+                    <a class="main-nav-link" href="/tags">Tags</a>
+                
+                    <a class="main-nav-link" href="/about">About</a>
+                
+            </nav>
+            
+                
+                <nav id="sub-nav">
+                    <div class="profile" id="profile-nav">
+                        <a id="profile-anchor" href="javascript:;">
+                            <img class="avatar" src="/css/images/avatar.jpg" />
+                            <i class="fas fa-caret-down"></i>
+                        </a>
+                    </div>
+                </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Rechercher" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fas fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Articles',
+            PAGES: 'Pages',
+            CATEGORIES: 'Catégories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/.">Home</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">Archives</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">Categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">Tags</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">About</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Rechercher" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+                
+
+<aside id="profile" class="profile-fixed">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            <img id="avatar" src="/css/images/avatar.jpg" />
+            <h2 id="name">Jay</h2>
+            <h3 id="title">Web Developer &amp; Designer</h3>
+            <span id="location"><i class="fas fa-map-marker-alt" style="padding-right: 5px"></i>Guangzhou , China</span>
+            <a id="follow" target="_blank" href="https://github.com/yzzjxx">SUIVRE</a>
+        </div>
+        <div class="article-info profile-block">
+            <div class="article-info-block">
+                3
+                <span>Articles</span>
+            </div>
+            <div class="article-info-block">
+                0
+                <span>Tag</span>
+            </div>
+        </div>
+        
+        <div class="profile-block social-links">
+            <table>
+                <tr>
+                    
+                    
+                    <td>
+                        <a href="http://yzzjxx.github.io" target="_blank" title="github" class=tooltip>
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="twitter" class=tooltip>
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="facebook" class=tooltip>
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="dribbble" class=tooltip>
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="sina" class=tooltip>
+                            <i class="fab fa-sina"></i>
+                        </a>
+                    </td>
+                    
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+</aside>
+
+            
+            <section id="main"><article id="post-JavaScript笔记" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+            JavaScript笔记
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/2018/08/23/JavaScript笔记/">
+            <time datetime="2018-08-23T13:04:37.000Z" itemprop="datePublished">2018-08-23</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p><img src="../../public/css/images/shoes.jpg" alt=""></p>
+<p>Welcome to myBlod! This is my very first test post. Please give me some marks!  Thanks for you reading! Have a good time!</p>
+<a id="more"></a>
+<h2 id="JavaScript介绍（原名LiveScript，作者：布兰登·艾奇）"><a href="#JavaScript介绍（原名LiveScript，作者：布兰登·艾奇）" class="headerlink" title=".JavaScript介绍（原名LiveScript，作者：布兰登·艾奇）"></a>.JavaScript介绍（原名LiveScript，作者：布兰登·艾奇）</h2><h2 id="JavaScript是什么"><a href="#JavaScript是什么" class="headerlink" title=".JavaScript是什么"></a>.JavaScript是什么</h2><blockquote>
+<ol>
+<li>是一门脚本语言</li>
+<li>是一门解释性语言</li>
+<li>是一门动态类型的语言</li>
+<li>是一门基于对象的语言</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>编译语言：需要要代码计算机所认知的二进制语言，才能够执行</p>
+<p>脚本语言：不需要编译，直接执行（t-sql、cmd）</p>
+</blockquote>
+<h2 id="JavaScript的作用"><a href="#JavaScript的作用" class="headerlink" title=".JavaScript的作用"></a>.JavaScript的作用</h2><blockquote>
+<p>最初：解决用户与浏览器之间的交互问题</p>
+</blockquote>
+<blockquote>
+<p>现在：</p>
+<ol>
+<li>网页特效</li>
+<li>服务端开发（nodejs)</li>
+<li>游戏开发</li>
+<li>APP</li>
+</ol>
+</blockquote>
+<h2 id="JavaScript代码注意问题"><a href="#JavaScript代码注意问题" class="headerlink" title=".JavaScript代码注意问题"></a>.JavaScript代码注意问题</h2><blockquote>
+<ol>
+<li>在一对script标签中，有错误的JS代码会导致该错误代码后面的JS代码不执行</li>
+<li>如果第一对的script标签中的JS代码有错误，不会影响后面的script标签中的JS代码执行</li>
+<li>script标签包含 type=“text/javascript” 是标准写法，script标签中也可以包含 language=“JavaScript”</li>
+<li>目前的HTML页面，script中的type和language都可以省略，因为HTML遵循h5的标准</li>
+<li>script 标签一般放在 body 最后，可以提升浏览器的执行效率</li>
+<li>js 中大小写是区分的</li>
+<li>变量命名要遵循驼峰命名法</li>
+<li>变量是用来操作数据的（存储和读取）</li>
+<li>单行注释 //</li>
+<li>多行注释 /**/</li>
+</ol>
+</blockquote>
+<h2 id="JS-数据类型"><a href="#JS-数据类型" class="headerlink" title=". JS 数据类型"></a>. JS 数据类型</h2><blockquote>
+<ol>
+<li><p>number：数字类型（整数和小数）</p>
+</li>
+<li><p>string：字符串类型（值一般用引号包含起来）</p>
+</li>
+<li><p>boolean：布尔类型（值只有两个，true（真1），false（假0））</p>
+</li>
+<li><p>null：空类型，值只有一个：null，一个对象指向为空，此时可以赋值为null</p>
+<p>*null是对象类型，表示空对象，alert(typeof(null)); 会输出object；</p>
+<p>*alert(<strong>null</strong> == document.getElementById(‘notExistElement’));</p>
+<p>​    当页面上不存在id为”notExistElement”的DOM节点时，这段代码显示为”true”，因为我们尝试获取            一个不存在的对象。</p>
+<p>*alert(<strong>null</strong> == undefined); //output “true”  </p>
+<p>*alert(<strong>null</strong> === undefined); //output “false”  </p>
+<p>*alert(<strong>typeof</strong> <strong>null</strong> == <strong>typeof</strong> undefined); //output “false” </p>
+</li>
+<li><p>undefined：未定义，值只有一个：undefined</p>
+<p>*变量声明了，没有赋值，结果是undefined；</p>
+<p>*函数没有明确返回值，如果接收了，结果是undefined；</p>
+<p>*一个结果是undefined的变量与一个数字进行计算，结果为NaN（not a number）</p>
+</li>
+<li><p>object：对象</p>
+</li>
+</ol>
+</blockquote>
+<h2 id="JS-数字类型"><a href="#JS-数字类型" class="headerlink" title=". JS 数字类型"></a>. JS 数字类型</h2><blockquote>
+<ol>
+<li>二进制 （00000001）</li>
+<li>八进制 （00000012）</li>
+<li>十进制 （10）</li>
+<li>十六进制 （0x1f）</li>
+<li>数字类型的范围：<ul>
+<li>console.log(Number.MAX_VALUE);  //数字的最大值</li>
+<li>console.log(Number.MIN_VALUE);  //数字的最小值</li>
+</ul>
+</li>
+<li>注意：<ul>
+<li>不要用小数去验证小数 </li>
+<li>不要用NaN验证是不是NaN，应该使用 isNaN()<ul>
+<li>isNaN 中变量不是一个数字，返回true</li>
+<li>isNaN 中变量是一个数字，返回false</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<h2 id="JS-字符串类型"><a href="#JS-字符串类型" class="headerlink" title=". JS 字符串类型"></a>. JS 字符串类型</h2><blockquote>
+<ol>
+<li>字符串长度：str.length;</li>
+<li>转义符：\</li>
+<li>字符串拼接<ul>
+<li>＋号两边有一个字符串，那么为字符串拼接</li>
+<li>＋号两边都是数字，那么为计算功能</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<h2 id="JS-类型转换"><a href="#JS-类型转换" class="headerlink" title=". JS 类型转换"></a>. JS 类型转换</h2><blockquote>
+<ol>
+<li>其他类型转为数据类型：<ul>
+<li>想要转整数用 parseInt() ,想要转小数用 parseFloat()</li>
+<li>想要转数字 Number()，这个方法比上面两种方式严格</li>
+</ul>
+</li>
+<li>其他类型转为字符串类型：<ul>
+<li>str.toString()        //无意义的字符串使用这个方法会报错</li>
+<li>String(str)            //无意义的字符串使用这个方法不会报错</li>
+</ul>
+</li>
+<li>其他类型转为布尔类型：<ul>
+<li>Boolean(value) </li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<h2 id="操作符"><a href="#操作符" class="headerlink" title=".操作符"></a>.操作符</h2><blockquote>
+<ol>
+<li>算术运算符：+ - * /<ul>
+<li>算术运算表达式：由算术运算符连接起来的表达式</li>
+</ul>
+</li>
+<li>一元运算符：只需要一个操作数就可以运算的符号（++ –）</li>
+<li>二元运算符：需要两个操作数才能运算的符号（）</li>
+<li>三元运算符：需要三个操作数才能运算的符号（）</li>
+<li>复合运算符：+=  -=  *=  /=  %=</li>
+<li>关系运算符：&gt;  &lt;  &gt;=  &lt;=  ==  ===  !=   !==<ul>
+<li>关系运算表达式：由关系运算符连接的表达式</li>
+<li>关系运算表达式的结果为布尔类型</li>
+</ul>
+</li>
+<li>逻辑运算符：&amp;&amp;   ||   !<ul>
+<li>逻辑运算表达式：由逻辑运算符连接起来的表达式</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<h2 id="计算机"><a href="#计算机" class="headerlink" title=".计算机"></a>.计算机</h2><blockquote>
+<ol>
+<li>计算机由硬件组成，需要操作系统才能运行</li>
+<li>应用程序（QQ、英雄联盟）在计算机的硬件中</li>
+<li>打开应用程序时，CPU指派硬件中的应用程序到内存中执行</li>
+</ol>
+</blockquote>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+</div>
+
+            
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2018/08/23/My-First-Post/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Plus ancien</strong>
+            <div class="article-nav-title">My First Post</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    
+
+</section>
+            
+                
+<aside id="sidebar">
+   
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">Récents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/08/23/JavaScript笔记/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/08/23/JavaScript笔记/" class="title">JavaScript笔记</a></p>
+                            <p class="item-date"><time datetime="2018-08-23T13:04:37.000Z" itemprop="datePublished">2018-08-23</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/08/23/My-First-Post/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/08/23/My-First-Post/" class="title">My First Post</a></p>
+                            <p class="item-date"><time datetime="2018-08-23T09:23:45.000Z" itemprop="datePublished">2018-08-23</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/08/23/hello-world/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/08/23/hello-world/" class="title">Hello World</a></p>
+                            <p class="item-date"><time datetime="2018-08-23T05:28:19.272Z" itemprop="datePublished">2018-08-23</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">Archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    
+        
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">Liens</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fas fa-angle-up"></div>
+</aside>
+
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2018 Jay<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
+        </div>
+    </div>
+</footer>
+        
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
