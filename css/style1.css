@@ -1,0 +1,514 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    height: 100%;
+    background: url(../img/bg2.jpg) no-repeat;
+    background-size: cover;
+    background-position: 0;
+    overflow: hidden;
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.audio {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    height: 2rem;
+    z-index: 99;
+}
+
+.audio.rotate {
+    animation: spin 2s infinite linear;
+    -webkit-animation: spin 2s infinite linear;
+}
+
+.audio img {
+    height: 2rem;
+}
+
+@keyframes chuangmove {
+    0% {
+        bottom: .2rem;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@-webkit-keyframes chuangmove {
+    0% {
+        bottom: .2rem;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes langmove {
+    0% {
+        bottom: 1.5rem;
+        left: 5.8rem;
+    }
+    100% {
+        bottom: 1.8rem;
+    }
+}
+
+@-webkit-keyframes langmove {
+    0% {
+        bottom: 1.5rem;
+        left: 5.8rem;
+    }
+    100% {
+        bottom: 1.8rem;
+    }
+}
+
+.boat {
+    position: fixed;
+    bottom: 3rem;
+    left: 50%;
+    transform: translate(-50%);
+    width: 12rem;
+    height: 7rem;
+}
+
+.boat img {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.boat img.chuang {
+    width: 10rem;
+    animation: chuangmove 1s infinite;
+    -webkit-animation: chuangmove 1s infinite;
+    animation-direction: alternate;
+    -webkit-animation-direction: alternate;
+}
+
+.boat img.lang {
+    width: 12rem;
+    bottom: 1.8rem;
+    left: 6rem;
+    animation: langmove 1s infinite;
+    -webkit-animation: langmove 1s infinite;
+    animation-direction: alternate;
+    -webkit-animation-direction: alternate;
+}
+
+.page {
+    height: 100%;
+    display: none;
+    overflow: hidden;
+}
+
+.page.current {
+    left: 0;
+    display: block;
+}
+
+.page1 {}
+
+.page1 .logo {
+    padding: 1rem 0 0 1.7rem;
+    height: 3rem;
+    width: 100%;
+}
+
+.page1 .logo img {
+    height: 1.7em;
+}
+
+/* page1 花 */
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.page1 .flower {
+    position: absolute;
+    left: 0;
+    top: 8rem;
+    display: none;
+}
+
+.page1 .flower img {
+    height: 12rem;
+}
+
+/* page1 鸟 */
+
+@keyframes birdmove {
+    0% {
+        left: calc(50% - 3rem);
+        opacity: 0;
+    }
+    100% {
+        left: calc(50% - 1rem);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes birdmove {
+    0% {
+        left: calc(50% - 3rem);
+        opacity: 0;
+    }
+    100% {
+        left: calc(50% - 1rem);
+        opacity: 1;
+    }
+}
+
+.page1 .bird {
+    position: absolute;
+    top: 5.5rem;
+    left: calc(50% - 1rem);
+    animation: birdmove 2s;
+    -webkit-animation: birdmove 2s;
+    display: none;
+}
+
+.page1 .bird img {
+    height: 2.8rem;
+}
+
+/* page1 云 */
+
+@keyframes yuninf {
+    0% {
+        left: 1.8rem;
+    }
+    100% {
+        left: 2rem;
+    }
+}
+
+@-webkit-keyframes yuninf {
+    0% {
+        left: 1.8rem;
+    }
+    100% {
+        left: 2rem;
+    }
+}
+
+.page1 .yun {
+    position: absolute;
+    top: 20.5rem;
+    animation: yuninf 1.5s infinite;
+    -webkit-animation: yuninf 1.5s infinite;
+    animation-direction: alternate;
+    -webkit-animation-direction: alternate;
+    display: none;
+}
+
+.page1 .yun img {
+    height: 1rem;
+}
+
+/* page1 文字 */
+
+@keyframes yunmove {
+    0% {
+        top: 0;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes yunmove {
+    0% {
+        top: 0;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes font1move {
+    0% {
+        opacity: 0;
+        top: -30rem;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+@-webkit-keyframes font1move {
+    0% {
+        opacity: 0;
+        top: -30rem;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+@keyframes font2move {
+    0% {
+        opacity: 0;
+        right: -5.3rem;
+    }
+    100% {
+        opacity: 1;
+        right:0;
+    }
+}
+
+@-webkit-keyframes font2move {
+    0% {
+        opacity: 0;
+        right: -5.3rem;
+    }
+    100% {
+        opacity: 1;
+        right:0;
+    }
+}
+
+.page1 .font {
+    position: absolute;
+    right: 1.5rem;
+    top: 10em;
+}
+
+.page1 .font img {
+    position: absolute;
+}
+
+.page1 .font img.yun1 {
+    right: -.5rem;
+    top: 10rem;
+    width: 2.5rem;
+    animation: yunmove 2s;
+    -webkit-animation: yunmove 2s;
+    display: none;
+}
+
+.page1 .font img.yun2 {
+    right: 3.5rem;
+    top: .5rem;
+    width: 2.5rem;
+    animation: yunmove 2s;
+    -webkit-animation: yunmove 2s;
+    display: none;
+}
+
+.page1 .font img.font1 {
+    width: 5rem;
+    right: 0;
+    animation: font1move 2s;
+    -webkit-animation: font1move 2s;
+    display: none;
+}
+
+.page1 .font .font2_div {
+    width: 4rem;
+    height: 14rem;
+    right: 5.3rem;
+    position: absolute;
+    overflow: hidden;
+    display: none;
+}
+
+.page1 .font img.font2 {
+    width: 3rem;
+    right: 0rem;
+    top: 2.5rem;
+    animation: font2move 3s;
+    -webkit-animation: font2move 3s;
+}
+
+/* page1 按钮 */
+
+.page1 .btn {
+    position: absolute;
+    right: 3rem;
+    top: 25rem;
+    animation: fade-in 3s;
+    -webkit-animation: fade-in 3s;
+}
+
+/* page1 荷花 */
+
+.page1 .flower2 {
+    position: absolute;
+    bottom: .5rem;
+    height: 4rem;
+}
+
+.page1 .flower2 img {
+    width: 80%;
+    display: block;
+    margin: 0 0 0 3rem;
+}
+
+.page2 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.page .goose {
+    position: absolute;
+    bottom: 5rem;
+    right: 2.5rem;
+    display: none;
+}
+
+.page .goose img {
+    width: 5rem;
+}
+
+@keyframes font2move {
+    0% {
+        opacity: 0;
+        right: -5.3rem;
+    }
+    100% {
+        opacity: 1;
+        right:0.5rem;
+    }
+}
+
+@-webkit-keyframes font2move {
+    0% {
+        opacity: 0;
+        right: -5.3rem;
+    }
+    100% {
+        opacity: 1;
+        right:0.5rem;
+    }
+}
+
+.page2 .font {
+    position: absolute;
+    width: 9rem;
+    height: 20rem;
+    padding: 5rem 0 0 2rem;
+    overflow: hidden;
+    display: none;
+}
+
+.page2 .font img {
+    height: 15rem;
+    position: absolute;
+    animation: font2move 5s;
+    -webkit-animation: font2move 5s;
+}
+.page2 .btn {
+    position: absolute;
+    right: 4rem;
+    top: 10rem;
+}
+
+.page3 .font {
+    position: absolute;
+    width: 5rem;
+    height: 20rem;
+    padding: 5rem 0 0 5rem;
+    overflow: hidden;
+}
+.page3 .font img {
+    height: 20rem;
+    position: absolute;
+    animation: font2move 5s;
+    -webkit-animation: font2move 5s;
+}
+
+.page3 .btn {
+    position: absolute;
+    right: 4rem;
+    top: 10rem;
+}
+
+.pageEnd {
+    position: absolute;
+    width: 100%;
+}
+.pageEnd div {
+    height: 10rem;
+    position: absolute;
+}
+.pageEnd .flower{
+    right: 0;
+    top: 0;
+}
+.pageEnd .flower img {
+    height: 12rem;
+}
+.pageEnd .grass{
+    bottom: 0;
+    left: 0;
+}
+.pageEnd .grass img {
+    height: 3rem;
+    position: absolute;
+    bottom: 0;
+}
+.pageEnd .font{
+    top: 20rem;
+    left: 50%;
+    transform: translate(-50%);
+}
+.pageEnd .font img {
+    height: 4rem;
+}
+.pageEnd .logo{
+    top: 25rem;
+    left: 50%;
+    transform: translate(-50%);
+}
+.pageEnd .logo img {
+    height: 2em;
+}
+.pageEnd .btn {
+    bottom: 5rem;
+    left: 50%;
+    transform: translate(-50%);
+}
